@@ -1,0 +1,33 @@
+{
+    "name": "Darkseid.io",
+    "description": "Darkseid.io is a free service that automatically generates a dark mode version of your website.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "action": {
+        "default_title": "Darkseid.io",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [
+        "https://*/*",
+        "http://*/*"
+      ],
+    "web_accessible_resources": [
+        {
+            "resources": [ 
+                "darkMode.css"
+            ],
+            "matches": [
+                "https://*/*",
+                "http://*/*"
+            ]
+        }
+    ]
+}

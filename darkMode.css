@@ -1,0 +1,13 @@
+/* darkMode.css */
+
+.darkseid-dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+  }
+  
+  .darkseid-dark-mode a {
+    color: #9cf;
+  }
+  
+  /* Add more CSS rules for dark mode as needed */
+  

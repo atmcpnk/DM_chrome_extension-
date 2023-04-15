@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<style>
+    .background{
+        background-color: darkgray;
+    }
+    h1{
+        font-family: 'Orbitron', sans-serif;
+    }
+    .Black{
+        color: black;
+    }
+    .Red{
+        color: red;
+    }
+    #inactive{
+        color: black;
+    }
+    p, .button{
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.25rem;
+    }
+    .button{
+        background-color: red;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 2rem;
+        width: 12rem;
+        border: 2px solid black;
+        border-radius: 1.25rem;
+        /* animation: backgroundChange 1s infinite; */
+        cursor: pointer;
+    }
+    .row{
+        padding: .25rem;
+        pointer-events: none;
+    }
+    .circle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2rem;
+        width: 6rem;
+        border-radius: 1rem;
+        background-color: darkred;
+        /* animation: moveIndicatorRight 1s infinite; */
+        pointer-events: none;
+    }
+
+    /* animatons */
+
+    @keyframes moveIndicatorRight {
+        from{
+            left: 0;
+            background-color: gray;
+        }
+        to{
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: darkred;
+        }
+        
+    }
+
+    @keyframes moveIndicatorLeft {
+        from{
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: darkred;
+        }
+        to{
+            left: 0;
+            background-color: gray;
+        }
+        
+    }
+
+    @keyframes backgroundChange {
+        from{
+            background-color: black;
+        }
+        to{
+            background-color: red;
+        }
+    }
+</style>
+<body class="background">
+    <h1><span class="Black">Dark</span><span class="Red">seid.io</span></h1>
+    <p>click below to go dark</p>
+    <div class="button">
+        <div class="row" id="active">Active</div>
+        <div class="row" id="inactive">Inactive</div>
+        <div class="circle"></div>
+    </div>
+</body>
+<script src="popup.js"></script>
+</html>
+
+
